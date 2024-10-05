@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Glowing Inputs Login Form UI</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="login-form">
+         <div class="text">
+            REGISTER
+         </div>
+         <form method=post>{% csrf_token %}
+            <div class="field">
+               <div class="fas fa-user"></div>
+               {{form.username}}
+            </div>
+            <div class="field">
+               <div class="fas fa-envelope"></div>
+               {{form.email}}
+            </div>
+            <div class="field">
+               <div class="fas fa-lock"></div>
+               {{form.password}}
+            </div>
+            <div class="field">
+               <div class="fas fa-lock"></div>
+               {{form.password_confirmation }}
+            </div>
+            <button type="submit">REGISTER</button>
+            <div class="link">
+               Already registerd?
+               <a href="/">Login</a>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
