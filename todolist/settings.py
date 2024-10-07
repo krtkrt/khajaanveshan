@@ -78,11 +78,9 @@ WSGI_APPLICATION = 'todolist.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todolistdjango-postgres',
-        'USER': 'default',
-        'PASSWORD': 'neLT96ZQqjrC',
-        'HOST': 'ep-dark-voice-a4r2gh39-pooler.us-east-1.aws.neon.tech',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        
         
     }
 }
